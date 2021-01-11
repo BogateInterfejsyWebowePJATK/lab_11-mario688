@@ -1,0 +1,68 @@
+$primarycolor:#a0bb46;
+$articlecolor:#bcc991;
+$headercolor:#c5d398;
+$background:#c5d398;
+$primarycolorHover:#a7cc2d;
+$textcolor: #222;  
+$font:Book Antiqua;
+img{
+  width:150px; 
+  height:150px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color:$background ;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+header{
+  background-color: $headercolor;
+  font-family:$font;
+}
+
+#footer{
+  width: 100%;
+  height:50px;
+  font-family:$font;
+  font-weight: bold;
+  position: absolute;
+  bottom:0px;
+  background-color:$primarycolor ;
+  
+}
+#article{
+  color:$textcolor;
+  background-color: $articlecolor;
+}
+section{
+  border-bottom:solid 1px black;
+}
+nav {
+  overflow: hidden;
+  background-color:$primarycolor;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  ul {
+    text-align: center;
+    list-style-type: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    li {
+      display: inline;
+      font-family: "Fira Sans", sans-serif;
+      font-size: 17px;
+      a {
+        color: $textcolor;
+        text-decoration: none;
+        padding: 14px;
+        &:hover {
+          background-color:$primarycolorHover;
+        }
+      }
+    }
+  }
+}
