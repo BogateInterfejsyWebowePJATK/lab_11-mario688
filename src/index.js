@@ -2,13 +2,13 @@
 import './index.scss';
 import React from "react";
 import ReactDOM, { render } from "react-dom";
-import {List} from "./components/List";
+import GetRandom from "./components/GetRandom"
 
 
 
 
 
  ReactDOM.render(
-     <List />,
+    <GetRandom />,
      document.getElementById("root")
  );

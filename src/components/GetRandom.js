@@ -1,27 +1,32 @@
-import React,{Component} from 'react'
+import React, { useState } from "react";
 
 
-export class GetRandom extends Component{
-    render(){
-     
-       function RenderIntgers() {
+export default function GetRandom() {
 
-        var random=Math.floor(Math.random() * 100)
 
-      return (
-      <>
-        <h4>{random}</h4>
-      </>
 
-    );
-}   
+var tab=[];
 
-        return(<>
-         
-            <RenderIntgers />
-          
-            </>
-        )
-    }
+const [RandomNumber, setnumber] = useState([]);
+
+  const Random = () =>{
+    setnumber(Array.apply(0, Array(10)).map(() =>Math.floor(Math.random() * 100)));
+  }
+  return(
+    <div>
+      <ul>
+             {RandomNumber.map((i, x) => {
+   	         return <li key={x}>{i}</li>
+            })}
+        </ul>  
+        <button onClick={Random}>
+         Generuj Liczby
+        </button> 
+    </div>
+  );
+
+
+
+
 
 }
